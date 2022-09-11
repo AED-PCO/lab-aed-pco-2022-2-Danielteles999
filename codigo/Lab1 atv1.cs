@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,28 +10,26 @@ namespace ConsoleApp69
     {
         static void Main(string[] args)
         {
+            Console.Write("Números Perfeitos de 1000 a 9999:");
 
             for (int i = 1000; i <= 9999; i++)
             {
-                string numInt = Convert.ToString(i);
-                char[] numero  = numInt.ToCharArray();
+                string num = Convert.ToString(i);
 
-                string Parte1 = Convert.ToString(numero[0]+numero[1]);
-                string Parte2 = Convert.ToString(numero[2]+numero[3]);
+                string PrimeiraMetd = num.Substring(0,2);
+                string SegundaMetd = num.Substring(2, 2);
 
-                Console.WriteLine(Parte1);
+                int PrimeiraPart = int.Parse(PrimeiraMetd);
+                int SegundaPart = int.Parse(SegundaMetd);
 
-                int Parte1conv = int.Parse(Parte1);
-                int Parte2conv = int.Parse(Parte2);
+                int quad = (PrimeiraPart + SegundaPart) * (PrimeiraPart + SegundaPart);
 
-                int somatotal = Parte1conv + Parte2conv;
-
-                if (somatotal == i*i)
+                if (quad==i)
                 {
-                    Console.WriteLine(i);
+                    Console.Write($" {i} ");
                 }
-                
             }
+            Console.ReadKey();
         }
     }
 }
