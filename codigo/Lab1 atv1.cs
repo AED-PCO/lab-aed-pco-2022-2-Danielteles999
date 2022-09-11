@@ -10,8 +10,6 @@ namespace ConsoleApp69
     {
         static void Main(string[] args)
         {
-            Console.Write("Números Perfeitos de 1000 a 9999:");
-
             for (int i = 1000; i <= 9999; i++)
             {
                 string num = Convert.ToString(i);
