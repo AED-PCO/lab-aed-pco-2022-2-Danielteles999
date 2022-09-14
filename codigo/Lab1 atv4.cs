@@ -45,7 +45,9 @@ namespace ConsoleApp74
                 //Somador de linhas
                 for (int j = 0; j < 3; j++)
                 {
-                    if (m<5)
+                    somaLinha = somaLinha + Vetor[m, j];
+
+                    if (m < 5)
                     {
                         if ((j == 2))
                         {
@@ -57,10 +59,10 @@ namespace ConsoleApp74
                                 m++;
                                 teste1 = true;
                             }
-                            
+
                         }
-                    }  
-                    somaLinha = somaLinha + Vetor[m, j];
+                    }
+                    
 
 
                 }
@@ -100,3 +102,4 @@ namespace ConsoleApp74
             Console.ReadKey();
         }
     }
+}
