@@ -1,4 +1,6 @@
-﻿using System;
+//Atividade 2
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +21,7 @@ namespace ConsoleApp1
 
             for (int i = 1; i <= num; i++)
             {
-                if (num%i == 0)
+                if (num % i == 0)
                 {
                     cont++;
                 }
@@ -28,39 +30,35 @@ namespace ConsoleApp1
             if (cont <= 2)
             {
                 Console.WriteLine("O número {0} é primo!", num);
-                Console.ReadKey();
             }
             else
             {
                 Console.WriteLine("O número {0} NÃO é primo!", num);
-                Console.ReadKey();
             }
 
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Números perfeitos de 1 a 1000: ");
 
             //Parte2
-            int soma = 0;
+            int soma = 0, num2 = 1;
 
-            for (int j = 1; j <= 1000; j++)
+            while (num2 <= 1000)
             {
-                for (int k = 1; k <= j; k++)
+                soma = 0;
+
+                for (int i = 1; i < num2; i++)
                 {
-
-                    int[] div = new int[k];
-
-                    if (j%k==0)
-                    {
-                       div[k] = k;
-                    }
-
-                    soma += div[k];
-
-                    if (soma==6)
-                    {
-                        Console.WriteLine(j);
-                    }
-
+                    if (num2 % i == 0)
+                        soma = soma + i;
                 }
+
+                if (soma == num2)
+                    Console.Write($"{num2}, ");
+
+                num2++;
             }
+
+            Console.ReadKey();
         }
 
     }
