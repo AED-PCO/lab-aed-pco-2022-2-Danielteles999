@@ -46,6 +46,8 @@ Foi feito no Visual Studio Professional 2017, no formato .cs
 
 ![image](https://user-images.githubusercontent.com/107625244/190034446-34b0cc97-103a-43f4-87e9-1f4fa9771a9f.png)
 
+------------------------------------------------------------------------
+
 ### Atividade 3
 
 Faça um programa que receba os elementos de dois vetores, A e B, cada um com 5 posições. 
@@ -68,9 +70,16 @@ Primeiramente criei um looping para criar a matriz lendo cada posição, para is
 
 (Utilizei uma variavel bool para controlar a repetição do while, pois o for não estava entrando em looping corretamente...)
 
-Criei um for passando pela quantidade de colunas. Pois a soma das linhas consiste em um valor de linha que varia somente quando passar por todas as colunas. A incrementação da posição da linha foi controlada "manualmente".
+Criei um for passando pela quantidade de colunas. No início já solicitei a soma do valor da posição + valor atual da soma. Lembrando que a soma das linhas consiste em um valor de linha que varia somente quando passar por todas as colunas. A incrementação da posição da linha foi controlada "manualmente".
 
-Se a linha atingiu seu limite (length), dentro desta condição se o número gerado de colunas for igual a pposição final, a varivel bool acusará false para interromper o looping e executar o código.  
+Se a linha atingiu seu limite (length), dentro desta mesma condição, se o número gerado de colunas for igual a posição final, a varivel bool acusará false para interromper o looping e executar o código. Exibirá a soma da linha, e resetará a variavel somaLinha para receber a soma de uma nova linha. Coloquei outro controle de que o valor da linha só incrementará se o mesmo ser menor que o limite.
+
+A mesma implementação ocorreu para a soma das colunas, porém neste caso o while incrementou a coluna e o for controlou o valor das linhas.
+
+Foi feito no Visual Studio Professional 2017, no formato .cs
+
+![image](https://user-images.githubusercontent.com/107625244/190036742-222fce45-5de2-44c5-ab34-62422b71ad22.png)
+
 
 ------------------------------------------------------------------------
 Para cada aula de laboratório, salvar print da execução de cada atividade com o resultado da execução do programa.
