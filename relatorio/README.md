@@ -46,7 +46,31 @@ Foi feito no Visual Studio Professional 2017, no formato .cs
 
 ![image](https://user-images.githubusercontent.com/107625244/190034446-34b0cc97-103a-43f4-87e9-1f4fa9771a9f.png)
 
+### Atividade 3
 
+Faça um programa que receba os elementos de dois vetores, A e B, cada um com 5 posições. 
+Considere que nenhum dos vetores possui elementos repetidos.
+Crie um vetor resultante C que possua os elementos comuns entre A e B.
+Crie um vetor resultante D que contenha os elementos de A que não existam em B.
+
+[Não rodou 100%... ainda em construção]
+
+------------------------------------------------------------------------
+
+### Atividade 4
+
+Faça um programa que receba os elementos de uma matriz de 5 linhas por 3 colunas. 
+Mostre a soma dos elementos de cada uma das linhas e das colunas da matriz.
+
+A solução se encontra no arquivo Lab1 atv4.cs
+
+Primeiramente criei um looping para criar a matriz lendo cada posição, para isso utilizei dois for, para linha e para coluna. Após a leitura e armazenamento, primeiro comecei a somar as linhas. Criei um while para executar quando uma das variaveis for verdadeira E quando a quantidade de linhas atingir o limite. 
+
+(Utilizei uma variavel bool para controlar a repetição do while, pois o for não estava entrando em looping corretamente...)
+
+Criei um for passando pela quantidade de colunas. Pois a soma das linhas consiste em um valor de linha que varia somente quando passar por todas as colunas. A incrementação da posição da linha foi controlada "manualmente".
+
+Se a linha atingiu seu limite (length), dentro desta condição se o número gerado de colunas for igual a pposição final, a varivel bool acusará false para interromper o looping e executar o código.  
 
 ------------------------------------------------------------------------
 Para cada aula de laboratório, salvar print da execução de cada atividade com o resultado da execução do programa.
