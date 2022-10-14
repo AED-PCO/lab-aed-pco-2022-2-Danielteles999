@@ -82,4 +82,29 @@ Foi feito no Visual Studio Professional 2017, no formato .cs
 
 
 ------------------------------------------------------------------------
+### Atividade 5
+
+Função capaz de calcular x elevado a y. Utilize a passagem por referencia
+
+Muito bem, primeira coisa é pedir as entradas para o usuário. Peço o número e o expoente para a operação. E passo a uma função os valores lidos com o "ref".
+
+Dentro da função, recendo com o ref. Faço um laço para fazer a operação interna, vou somando um avariavel a ela mesma multimplicando pelo número informando. O looping para quando o i é menor que o expoente. Depois retorno a variavel com o valor para o Main, o qual retorno o valor com uma string.
+
+![image](https://user-images.githubusercontent.com/107625244/195958344-5fac1a3e-1368-413f-97e7-d4959b9800b2.png)
+
+
+
+Foi feito no Visual Studio 2017
+
+------------------------------------------------------------------------
+### Atividade 6
+
+Faça um programa que chame uma função capaz de calcular o Fatorial de um número inteiro.
+
+Olha bem simples, Primeira coisa é receber as entradas. 
+Para fazer a operação, criei uma função Fatorial recebendo o valor lido no Main. Faço um laço que soma uma variavel a ela mesma multíplicando a i. Detalhe, este laço começa com o valor lido -1, o qual incrementa a partir de cada repetição. Após isto retorno a variável ao Main, que o exibe com uma string.
+
+![image](https://user-images.githubusercontent.com/107625244/195958548-feef3a01-7c24-40bd-90c1-d47e644bd5fd.png)
+
+
 Para cada aula de laboratório, salvar print da execução de cada atividade com o resultado da execução do programa.
