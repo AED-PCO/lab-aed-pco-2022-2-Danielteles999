@@ -102,9 +102,75 @@ Foi feito no Visual Studio 2017
 Faça um programa que chame uma função capaz de calcular o Fatorial de um número inteiro.
 
 Olha bem simples, Primeira coisa é receber as entradas. 
-Para fazer a operação, criei uma função Fatorial recebendo o valor lido no Main. Faço um laço que soma uma variavel a ela mesma multíplicando a i. Detalhe, este laço começa com o valor lido -1, o qual incrementa a partir de cada repetição. Após isto retorno a variável ao Main, que o exibe com uma string.
+Para fazer a operação, criei uma função Fatorial recebendo o valor lido no Main. Faço um laço que soma uma variavel a ela mesma multíplicando a i. Detalhe, este laço começa com o valor lido -1, o qual decrementa a partir de cada repetição. Após isto retorno a variável ao Main, que o exibe com uma string.
 
 ![image](https://user-images.githubusercontent.com/107625244/195958548-feef3a01-7c24-40bd-90c1-d47e644bd5fd.png)
+------------------------------------------------------------------------
+
+## Laboratório 2
+
+### Atividade 1
+Fibonacci Recursivo
+
+Li o valor inserido pelo usuário e envio para a função fibo.
+Esta função recursiva possui 2 condições de parada.
+1. Quando o número é igual a 0
+2. Quando número é igual a 1
+
+A expressãop consiste em pegar a função recendo o número -1 e somar com a própria função -2. As chamadas vão se empilhar fazendo que um parte da soma retorna 1 e a outra 0, finalizando a operação fibonacci. Ao final envio o valor calculado ao Main.
+
+![image](https://user-images.githubusercontent.com/107625244/195958877-b8b18162-fa90-4bb9-a666-b78e97149773.png)
+
+------------------------------------------------------------------------
+### Atividade 2
+Fatorial recursivo
+
+Recebo a número desejado para a operação e envio para a função fat.
+A função tem uma cond. de parada que é quando o número é igual a 1.
+A expressão é pegar o número lido e somar com a função recebendo o número -1.
+No decorrer das chamadas o valor é multiplicado com um número que vai decrementando. E nas chamadas o valor vai sendo acumulado.
 
 
-Para cada aula de laboratório, salvar print da execução de cada atividade com o resultado da execução do programa.
+![image](https://user-images.githubusercontent.com/107625244/195959106-fdf34f57-33a9-4b79-b06b-4d33ac5f3489.png)
+
+------------------------------------------------------------------------
+### Atividade 3
+Multipliação recursiva
+
+Recebi a entrada e enviei para a função sum. Envio para ela o valor e o seu multiplicador. A condição de parada é quando o multiplicador chega a 0. A expressão consiste em, quando o multiplicador é maior que 0, retornamos a função recebendo o valor, e o multiplicador -1, somando com o valor.
+
+Caso o multiplicador seja menor que 0, ou seja negativo, , retornamos a função recebendo o valor, e o multiplicador +1, somando com o valor. O qual é incrementado até chagar a 0, somando as posições semelhante a condição acima.
+
+![image](https://user-images.githubusercontent.com/107625244/195959301-f88e96ab-e2f9-4511-9565-0cacc9623397.png)
+
+------------------------------------------------------------------------
+### Atividade 4
+Potenciação recursiva
+
+Recebo os valores pelousuário. E envio para a função pot a base e o expoente.
+Na função recursiva coloquei a condição de parada quando o expoente é igual a 0. (Bem parecida com a multiplicação recursiva) Se o expoente for positivo, a expressõa é a função recebendo a base, mais o expoente -1 multiplicado o número.
+
+Se for negativo, a expressõa é a função recebendo a base, mais o expoente +1 multiplicado o número. De qualquer forma o valor chega a 0 e a função desempilha.
+
+![image](https://user-images.githubusercontent.com/107625244/195959551-f13b50a1-d28b-458a-961e-66df4669bc03.png)
+
+------------------------------------------------------------------------
+### Atividade 5
+
+Não rodou :(
+
+------------------------------------------------------------------------
+### Atividade 6
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+### Atividade 7
+Não rodou :(
