@@ -162,15 +162,47 @@ Não rodou :(
 ------------------------------------------------------------------------
 ### Atividade 6
 
+Escreva um método recursivo que calcule a 
+soma dos elementos de valor par de um 
+vetor de números inteiros positivos.
+
+Esse deu trabalho...
+
+Primera coisa pedi ao usuário definir o tamanho o vetor a ser criado.
+Depois disto fiz o um laço percorrendo até o tamanho determinado pelo usuário.
+
+Fui lendo e preenchendo as posições do vetor entregandoe ele para a funçãoi DevolveValores. Devolve valores recebe o vetor, mais o valor de i. A condição de parada é quando i é igual ao tamanho o vetor, ou seja, quando percorrer tdas as posiçõe, retornando 0.
+
+Se o vetor for par, ele retorna a soma somando a soma mais a posição do Vetor +  a função do Vetor recebendo o vetor, mais o i + 1. Caso não seja par, a soma não ocorre e é retornado a função para ser empilhada novamente. 
 
 
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/107625244/195960466-78a40672-1bc3-499c-a90e-22283dac587e.png)
 
 
 ------------------------------------------------------------------------
 ### Atividade 7
 Não rodou :(
+
+
+## Laboratório 3
+------------------------------------------------------------------------
+### Atividade 1
+Busca Boinária com o Pos
+
+Primeiro criei um vetor desordenado e solicitei o usuário qual o número que ele deseja procurar. Criei uma condição que compara se o valore retornado da função Buscabinariaos é maior que -1. Se sim retorna que está no vetor, se não, o contrário.
+
+Essa função que recebe o vetor, o número, o inicio, meio e o fim do vetor, Faz cortes a aprtir do meio para encontrar. Primeiro é calcular qual é o meio. O meio é o fim - o inicio dividido por 2. A condição de parada é justamente quando o inicio é maior que o fim. Se o número que está no meio for maior que o número procurado, ele faz a chamada recursiva com a função recenvo o vetor, número, o incio recebeno o meio +1, fim). Dessa forma ele considerou a metade direita.
+
+Se o número que está no meio for menor que o número procurado, ele faz a chamada recursiva com a função recenvo o vetor, número, o incio , fim recebeno o meio -1). Dessa forma ele considerou a metade esquerda.
+
+E a medida do empilhamento de chamadas, ele corta tanto para a direita quanto para esquerda até encontrar o valor desejado ou não. Se encontrar retorna a posição do meio, se não, retorna -1.
+
+![image](https://user-images.githubusercontent.com/107625244/195960986-98938871-1e2c-47cb-9ff7-3f69aa6ce6cb.png)
+------------------------------------------------------------------------
+### Atividade 2
+------------------------------------------------------------------------
+### Atividade 3
+------------------------------------------------------------------------
+### Atividade 4
+
+## Laboratório 6
