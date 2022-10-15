@@ -15,7 +15,7 @@ namespace ConsoleApp85
             meio = (fim + inic) / 2;
 
             //Condição de parada
-            if ()
+            if (inic>fim)
             {
                 return -1;
             }
