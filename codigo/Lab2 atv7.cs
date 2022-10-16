@@ -4,42 +4,67 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp78
+namespace ConsoleApp91
 {
     class Program
     {
-        static void RetiraVogal(string frase, int i)
+        static void Main(string[] args)
         {
-            char[] vogais = { 'a', 'e', 'i', 'o', 'u' };
+            Console.WriteLine("Removedor de vogais v6.1 \n");
+            Console.WriteLine("Insira a frase desejada: ");
+            string frase = Console.ReadLine();
 
-            if (i == frase.Length)
+            char[] fraseChar = frase.ToCharArray();//Convertendo...
+
+            Console.WriteLine($"Nova frase: {antivogal(fraseChar,0)}");
+            Console.ReadKey();
+        }
+
+        static string antivogal(char[] fraseChar, int num)
+        {
+
+            char[] Vogais = {'a','e','i','o','u'};
+
+            bool vogal = false;
+
+            for (int i = 0; i < 5; i++)
             {
-                
+                if (fraseChar[num]==Vogais[i])
+                {
+                    vogal = true;
+                }
             }
 
-            if (frase[i]==vogais[i])
+            
+            if (num == fraseChar.Length-1)
             {
-                frase.Replace('i', ' ') + RetiraVogal(frase, i+1);
+                if (vogal==true)
+                {
+                  return "";
+                }
+                else
+                {
+                    return fraseChar[num].ToString();
+                }
             }
             else
             {
+                string result = "";
 
+                if (vogal == true)
+                {
+                    result = "" + antivogal(fraseChar, num + 1);
+                    return result;
+                }
+                else
+                {
+                    result = "" + fraseChar[num].ToString() + antivogal(fraseChar, num + 1);
+                    return result;
+                }
             }
-        }   
-
-
-        static void Main(string[] args)
-        {
-
-            string frase = "";
-
-            Console.WriteLine("Insira a frase: ");
-            frase = Console.ReadLine();
-
-            Console.Write("Frase sem as vogais ");
-            Console.WriteLine($"{DevolveValores(Vetor, 0)}");
-            Console.ReadKey();
 
         }
+
+
     }
 }
