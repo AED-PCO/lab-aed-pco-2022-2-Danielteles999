@@ -12,9 +12,6 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-
-            {
-
                 int[] A = new int[5];
                 int[] B = new int[5];
 
@@ -34,7 +31,7 @@ namespace ConsoleApp2
                 for (int i = 0; i < A.Length; i++)
                 {
                     int num = 0;
-                    retomada:
+                retomada:
                     Console.WriteLine("Insira o {0}º número.", i + 1);
                     num = int.Parse(Console.ReadLine());
 
@@ -64,7 +61,7 @@ namespace ConsoleApp2
                 for (int j = 0; j < B.Length; j++)
                 {
                     int num2 = 0;
-                    retomada2:
+                retomada2:
                     Console.WriteLine("Insira o {0}º número.", j + 1);
                     num2 = int.Parse(Console.ReadLine());
 
@@ -100,12 +97,32 @@ namespace ConsoleApp2
                         {
                             C[y] = B[y];
                         }
-                        else
-                        {
-                            D[y] = A[y];
-                        }
                     }
                 }
+
+                bool cont;
+                
+                for (int x = 0; x < 5; x++)
+                {
+                    cont = true;
+
+                    for (int y = 0; y < 5; y++)
+                    {
+                        if (A[x]==B[y])
+                        {
+                            cont = false;
+                        }
+
+                        if ((y == 4) && (cont == true))
+                        {
+                            D[x] = A[x];
+                        }
+                    }
+
+
+                }
+                   
+
                 Console.WriteLine("==================");
                 Console.WriteLine("Resultados");
                 Console.WriteLine("==================");
@@ -136,8 +153,6 @@ namespace ConsoleApp2
                 }
 
                 Console.ReadKey();
-
-            }
         }
     }
 }
