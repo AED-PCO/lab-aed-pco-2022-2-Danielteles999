@@ -4,20 +4,6 @@ namespace ConsoleApp99
 {
     class Program
     {
-        public static int[] AdicionarPos(int[] Vet, int pos, int num)
-        {
-            //Shiftando
-            Array.Resize(ref Vet, Vet.Length + 1);
-
-            for (int j = Vet.Length-1; j > pos; j--)
-            {
-                Vet[j] = Vet[j - 1];        
-            }
-            Vet[pos] = num;
-
-            return Vet;
-        }
-
         public static int[] Adicionar(int[] Vet, int num)
         {
             Array.Resize(ref Vet, Vet.Length + 1);
@@ -26,16 +12,22 @@ namespace ConsoleApp99
         }
 
 
-        public static int[] RemoveVetor(int[] Vet, int aux, int num)
+        public static int[] RemoveVetor(int[] Vet)
         {
-            //Fazendo o shift
-            for (int j = aux; j < Vet.Length-1; j++)
+            if (Vet.Length == 1)
             {
-                Vet[j] = Vet[j + 1];
+                Array.Resize(ref Vet, Vet.Length - 1);
+                return Vet;
             }
-            Array.Resize(ref Vet, Vet.Length - 1);
-
-            return Vet;
+            else
+            {
+                for (int i = 0; i < Vet.Length - 1; i++)
+                {
+                    Vet[i] = Vet[i + 1];
+                }
+                Array.Resize(ref Vet, Vet.Length - 1);
+                return Vet;
+            }
         }
 
         public static void ExibirVetor(int[] Vetor)
@@ -48,95 +40,34 @@ namespace ConsoleApp99
 
         static void Main(string[] args)
         {
-            int[] Vet = new int[0];
-            int opcao = 0;
+            int[] Vet1 = {1,2,3,4,5,6,7,8,9,10};
 
-            do
+            int[] Vet2 = new int[Vet1.Length];
+
+            Console.Write("Exibindo o vetor 1: ");
+            ExibirVetor(Vet1);
+            Console.WriteLine(" ");
+            Console.Write("Exibindo o vetor 2: ");
+            ExibirVetor(Vet2);
+
+            int aux = Vet2.Length - 1;
+
+            for (int i = 0; i < Vet1.Length; i++)
             {
-                Console.WriteLine("----------------------------------------");
-                Console.Write("\nOpções: \n");
-                Console.WriteLine("{1}Adicionar item sem posição específica\n{2}Remover item");
-                Console.WriteLine("{3}Adicionar item com posição específica\n{4}Sair\n");
-                Console.Write("Insira a opção desejada: ");
-                opcao = int.Parse(Console.ReadLine());
+                Vet2[aux] = Vet1[i];
+                aux = aux - 1;
 
-                switch (opcao)
-                {
-                    case 1:
-                        {
-                            Console.WriteLine("Insira o número que deseja inserir: ");
-                            int num = int.Parse(Console.ReadLine());
-                            Vet = Adicionar(Vet, num);
-                            ExibirVetor(Vet);
-                            break;
-                        }
-                    case 2:
-                        {
-                            if (Vet.Length == 0)
-                            {
-                                Console.WriteLine("Não é possível remover itens.");
-                            }
-                            else
-                            {
+            }
 
-                                Console.WriteLine("Insira o número para remoção: ");
-                                int num = int.Parse(Console.ReadLine());
+            Console.WriteLine("\n---------------------------");
+            Console.WriteLine("Preenchendo o vetor 2\n");
 
-                                bool verif1 = false;
-                                int aux1=0;
-                                
-                                //Verificando se o elemento desejado está no vetor
-                                for (int i = 0; i < Vet.Length; i++)
-                                {
-                                    if (Vet[i] == num)
-                                    {
-                                        verif1 = true;
-                                        aux1 = i;
-                                    }
-                                }
+            Console.Write("Exibindo o vetor 1: ");
+            ExibirVetor(Vet1);
+            Console.WriteLine(" ");
+            Console.Write("Exibindo o vetor 2: ");
+            ExibirVetor(Vet2);
 
-                                if (verif1==true)
-                                {
-                                    Vet = RemoveVetor(Vet, aux1, num) ;
-                                    ExibirVetor(Vet);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Número não encontrado, tente novamente");
-                                }
-
-
-                            }
-                            break;
-                        }
-                    case 3:
-                        {
-                            Console.WriteLine("Insira o número que deseja inserir: ");
-                            int num = int.Parse(Console.ReadLine());
-                            Console.WriteLine("Insira a posição que deseja inserir: ");
-                            int pos = int.Parse(Console.ReadLine());
-
-                            if ((pos<Vet.Length-1)&&(pos>0))
-                            {
-
-                                Vet = AdicionarPos(Vet, pos, num);
-                                ExibirVetor(Vet);
-        
-                            }
-                            else
-                            {
-                                Console.WriteLine("Posição não existe no vetor, tente novamente.");
-                            }
-                            break;
-                        }
-                    default:
-                        {
-                            Console.WriteLine("Desculpe, opção inválida, tente novamente");
-                            break;
-                        }
-                }
-
-            } while (opcao != 4);
 
             Console.ReadKey();
 
