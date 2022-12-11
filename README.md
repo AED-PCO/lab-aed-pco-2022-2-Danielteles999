@@ -4,8 +4,8 @@ Repositório para publicação das resoluções dos exercícios de Laboratório 
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno
+* Daniel Teles dos Prazeres
 
 ## Professor responsável
 
-* Nome completo do professor
+* Leonardo Vilela Cardoso
