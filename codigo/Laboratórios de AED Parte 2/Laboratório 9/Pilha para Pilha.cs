@@ -14,20 +14,8 @@ namespace ConsoleApp99
 
         public static int[] RemoveVetor(int[] Vet)
         {
-            if (Vet.Length == 1)
-            {
-                Array.Resize(ref Vet, Vet.Length - 1);
-                return Vet;
-            }
-            else
-            {
-                for (int i = 0; i < Vet.Length - 1; i++)
-                {
-                    Vet[i] = Vet[i + 1];
-                }
-                Array.Resize(ref Vet, Vet.Length - 1);
-                return Vet;
-            }
+            Array.Resize(ref Vet, Vet.Length - 1);
+            return Vet;
         }
 
         public static void ExibirVetor(int[] Vetor)
@@ -46,7 +34,7 @@ namespace ConsoleApp99
             do
             {
                 Console.Write("\nOpções: \n");
-                Console.WriteLine("{1}Adicionar item\n{2}Remover item\n{3}Copiar para outra fila porem invertida\n{4}Sair\n");
+                Console.WriteLine("{1}Adicionar item\n{2}Remover item\n{3}Copiar ordem original para outro vetor auxiliar\n{4}Sair\n");
                 Console.Write("Insira a opção desajada: ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -75,22 +63,9 @@ namespace ConsoleApp99
                         }
                     case 3:
                         {
-                            Console.WriteLine("Vetor original");
-                            ExibirVetor(Vet);
-
-                            int[] Vet21 = new int[Vet.Length];
-                            int aux21 = Vet21.Length - 1;
-
-                            for (int i = 0; i < Vet.Length; i++)
-                            {
-                                Vet21[aux21] = Vet[i];
-                                aux21 = aux21 - 1;
-                            }
-
-                            Console.WriteLine("\n_________\n");
-                            Console.WriteLine("Vetor2 invertido: ");
-                            ExibirVetor(Vet21);
-
+                            int[] Vet31 = Vet;
+                            Console.WriteLine("Exibindo o novo vetor copiado: ");
+                            ExibirVetor(Vet31);
                             break;
                         }
                     case 4:
@@ -107,7 +82,10 @@ namespace ConsoleApp99
 
             } while (opcao != 4);
 
+            Console.ReadKey();
+
         }
+
 
     }
 }
